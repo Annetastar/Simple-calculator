@@ -1,0 +1,84 @@
+@import "mixins";
+body {
+  margin: 0;
+}
+.main__box {
+  padding: 50px calc(50% - 250px);
+  background-color: bisque;
+  height: 800px;
+  &_calculator {
+    width: 500px;
+    height: 500px;
+    background-color: #141869;
+    border-radius: 15px;
+    box-shadow: 20px 15px 10px 10px rgba(0, 0, 0, .2);
+    &_title {
+      color: antiquewhite;
+      font-family: 'Notable', sans-serif;
+      font-size: 30px;
+      width: 250px;
+      margin: 0 auto;
+    }
+    &_fields {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-left: 10px;
+      &_first-field {
+        @include field-properties;
+    }
+      &_second-field {
+        @include field-properties;
+      }
+    }
+    &_block {
+    display: flex;
+      &_buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 200px;
+        &_first-row,
+        &_second-row {
+          display: flex;
+          > button {
+            width: 60px;
+            height: 60px;
+            background-color: #3366b8;
+            box-shadow: 20px 10px 10px #0f3e8a inset;
+            font-size: 30px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            &.sum {
+              margin-right: 15px;
+              margin-bottom: 20px;
+            }
+            &.multiplication {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+p#out {
+  background-color: #6ec29f;
+  box-shadow: 10px 10px 40px #2a634b inset;
+  height: 60px;
+  width: 80%;
+  margin: 50px auto;
+  font-size: 55px;
+  font-family: Calculator, sans-serif;
+  box-sizing: border-box;
+  padding: 7px;
+
+}
+
+@font-face {
+  font-family: Calculator;
+  src: url('./fonts/Calculator.ttf');
+}

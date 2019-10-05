@@ -1,0 +1,25 @@
+@mixin field-properties {
+  display: block;
+  width: 70%;
+  margin-bottom: 60px;
+  > input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    font-family: Calculator, sans-serif;
+    font-size: 40px;
+    background-color: #6ec29f;
+    box-shadow: 10px 10px 40px #2a634b inset;
+    border: none;
+    &::placeholder {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: darkgreen;
+    }
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}

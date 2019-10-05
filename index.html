@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+	<title>Calculator</title>
+</head>
+<body>
+  <div class="main__box">
+		<div class="main__box_calculator">
+			<p class="main__box_calculator_title">Calculator</p>
+			<div class="main__box_calculator_block">
+			<div class="main__box_calculator_fields">
+			<label class="main__box_calculator_fields_first-field">
+				<input type="number" name="Field for first number" id="number1" placeholder="Write your number">
+			</label>
+			<label class="main__box_calculator_fields_second-field">
+				<input type="number" name="Field for second number" id="number2" placeholder="Write your second number">
+			</label>
+			</div>
+				<div class="main__box_calculator_block_buttons">
+					<div class="main__box_calculator_block_buttons_first-row">
+					  <button class="sum" onclick="sum()">+</button>
+					  <button class="subtraction" onclick="subtraction()">-</button>
+					</div>
+					<div class="main__box_calculator_block_buttons_second-row">
+					  <button class="multiplication" onclick="multiplication()">*</button>
+					  <button class="division" onclick="division()">/</button>
+					</div>
+				</div>
+			</div>
+			<p id="out"></p>
+		</div>
+	</div>
+	<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
